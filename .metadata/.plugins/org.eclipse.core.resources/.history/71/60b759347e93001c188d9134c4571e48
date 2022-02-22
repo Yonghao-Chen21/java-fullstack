@@ -1,0 +1,11 @@
+package com.lwl.cj.day4;
+
+public class NumberOperations {
+
+		public static void main(String[] args) {
+			
+				
+		}
+		
+		public static int sumOfDigits
+}
