@@ -4,6 +4,7 @@ public class PlayerStat {
 
 	public static void main(String[] args) {
 
+				
 		String data = "ShubmanGill,Batsman,80000000.0,India,GT-SaiSudarshan,Batsman,2000000.0,India,GT-AbhinavSadarangani,Batsman,26000000.0,India,GT";
 		String[] arr = data.split("-");
 		
@@ -29,7 +30,18 @@ public class PlayerStat {
 		
 		// Max amount min amount
 		
+		double max = players[0].amount;
+		double min = players[0].amount;
+		for(int l=1;l<players.length;l++) {
+			if(max < players[i].amount) {
+				max = players[i].amount;
+			}
+			if(min > players[i].amount) {
+				min = players[i].amount;
+			}
+		}
 		
+		System.out.println("Max amount :"+max);
 		
 		
 

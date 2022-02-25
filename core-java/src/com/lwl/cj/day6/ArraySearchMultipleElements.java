@@ -6,6 +6,14 @@ public class ArraySearchMultipleElements {
 
 	}
 
+	public int[] maxElementInEachRow(int[][] arr) {
+		
+		return null;
+	}
+	public void rotateArray(int[] arr,int n) {
+		
+	}
+	
 	public boolean search(int[] arr, int e1, int e2, int e3) {
 
 		if (searchElement(arr, e1) && searchElement(arr, e2) && searchElement(arr, e3)) {
