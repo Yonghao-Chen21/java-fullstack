@@ -12,8 +12,10 @@ public class ImmutableObject {
 					message.append("Welcome "+name+"\n");
 				}
 				System.out.println(message);
-				
-				
-				
+		
+		}
+		
+		public static boolean isPalindrome(String str) {
+				return new StringBuilder(str).reverse().toString().equals(str);
 		}
 }
