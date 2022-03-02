@@ -3,7 +3,10 @@ package com.lwl.cj.day9;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class IplStatService {
 
@@ -12,21 +15,44 @@ public class IplStatService {
 	IplStatService() {
 		this.players = loadPlayers();
 	}
-	
+
+	private boolean search(String[] arr, int key) {
+		// Logic
+
+		return true;
+	}
+
+	private String[] teamNames() {
+		String[] arr = new String[players.length];
+		int c = 0;
+		for (Player p : players) {
+			String teamName = p.getTeam();
+			// Logic
+
+		}
+		String[] temp = new String[c];
+		System.arraycopy(arr, 0, temp, 0, c);
+		return temp;
+	}
+
 	public void showPlayers(String teamName) {
-		//TODO
+		// TODO
 	}
+
 	public void showStats(String teamName) {
-    	//Max
-		//Min
-		//Count
+
+		// Max
+		// Min
+		// Count
 	}
+
 	public void teamStat() {
-		// Each team total amount count average 
-		// CSK - 8999999 - 22  - 400000
+		// Each team total amount count average
+		// CSK - 8999999 - 22 - 400000
 	}
+
 	public void showAllPlayers() {
-		for(Player p:players) {
+		for (Player p : players) {
 			p.showInfo();
 		}
 	}
@@ -53,6 +79,7 @@ public class IplStatService {
 	}
 
 	public static void main(String[] args) {
+
 		IplStatService obj = new IplStatService();
 		obj.showAllPlayers();
 	}

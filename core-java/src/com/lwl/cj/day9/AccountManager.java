@@ -9,18 +9,10 @@ public class AccountManager {
 				Account acc3 = new Account("Kalyan",15000);
 				Account acc4 = new Account("Charan",55000);
 				Account acc5 = new Account("Jayesh",5000);
-				
-				
-				
 				Account[] arr = new Account[] {acc1,acc2,acc3,acc4,acc5};
-				
-			
-				
 				for(Account acc:arr) {
 					acc.showInfo();	
 				}
-				
-				
-				
+			
 		}
 }
