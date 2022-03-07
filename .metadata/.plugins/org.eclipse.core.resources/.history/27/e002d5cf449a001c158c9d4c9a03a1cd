@@ -1,0 +1,37 @@
+package com.lwl.cj.day10;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.List;
+
+public class StockManager {
+
+	
+	public static void main(String[] args) {
+		
+		// CSV
+		
+		// Find cumulative returns of the given stock
+	}
+	
+	private Stock[] loadPlayers() {
+		Stock[] arr = null;
+		try {
+			List<String> list = Files.readAllLines(Paths.get("ipl_2022_data.csv"));
+			arr = new Stock[list.size() - 1];
+			int c = 0;
+			for (int i = 1; i < list.size(); i++) {
+				String[] data = list.get(i).split(",");
+				String name = data[0];
+				String role = data[1];
+				double price = Double.parseDouble(data[2]);
+				String country = data[3];
+				String team = data[4];
+				arr[c++] = new Player(name, role, price, country, team);
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return arr;
+	}
+}

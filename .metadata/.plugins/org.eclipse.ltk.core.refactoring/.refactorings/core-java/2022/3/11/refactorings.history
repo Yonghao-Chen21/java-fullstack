@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;com.lwl.cj.day11.MathOpersations.java&apos; to &apos;MathOperations.java&apos;&#x0D;&#x0A;- Original project: &apos;core-java&apos;&#x0D;&#x0A;- Original element: &apos;com.lwl.cj.day11.MathOpersations.java&apos;&#x0D;&#x0A;- Renamed element: &apos;com.lwl.cj.day11.MathOperations.java&apos;" description="Rename compilation unit &apos;MathOpersations.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;com.lwl.cj.day11{MathOpersations.java" name="MathOperations.java" references="false" stamp="1646679457935" version="1.0"/>
+</session>
