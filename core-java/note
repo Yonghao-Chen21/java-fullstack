@@ -3,4 +3,15 @@ public
 protected 
 (default)
 
+interface 
+
+
+		Game{
+		
+			start()
+			play()
+			stop()
+		
+		}
+
 
