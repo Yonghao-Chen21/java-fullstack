@@ -23,6 +23,7 @@ class Two extends One {
 
 	Two() {
 		super(999);
+		this.x = 90;
 	}
 
 	public void m1() {
@@ -60,6 +61,8 @@ public class AbstractManager {
 			ref.m2();
 		}
 		
+		One obj1 = new Two();
+		System.out.println(obj1.x);
 		
 	}
 
