@@ -1,9 +1,6 @@
 package com.lwl.cj.assignment;
 
-import java.util.concurrent.ThreadLocalRandom;
-
-interface Game{
-	
+interface Game{	
 		public void start();
 		public void play();
 		public void stop();
