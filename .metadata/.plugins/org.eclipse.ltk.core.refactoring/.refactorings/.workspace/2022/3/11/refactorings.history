@@ -1,4 +1,3 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Delete resource &apos;Java_Full_Stack&apos;" deleteContents="false" description="Delete resource &apos;Java_Full_Stack&apos;" element1="/Java_Full_Stack" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1646703599819"/>
+<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;Java_Full_Stack&apos;" deleteContents="false" description="Delete resource &apos;Java_Full_Stack&apos;" element1="/Java_Full_Stack" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1646703599819"/>&#x0A;<refactoring comment="Delete resource &apos;Test&apos;" deleteContents="true" description="Delete resource &apos;Test&apos;" element1="/Test" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1646848684833"/>
 </session>

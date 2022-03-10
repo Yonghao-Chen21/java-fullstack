@@ -30,9 +30,13 @@ class Product implements Cloneable {
 }
 
 @FunctionalInterface
+//lambda expression can only work on functional interface
 interface I2 {
 
 	int biggest(int a, int b);
+	default void m1() {
+		System.out.println("m1");
+	}
 
 }
 
@@ -47,7 +51,8 @@ public class InterfaceTypesExample {
 //		System.out.println(p1);
 //		System.out.println(p2);
 		
-		I2 obj = (a,b)-> a > b ? a:b;
+		I2 obj = (a,b)-> a > b ? a:b; //only if interface has just one abstract method;
 		System.out.println(obj.biggest(3, 5));
+		obj.m1();
 	}
 }

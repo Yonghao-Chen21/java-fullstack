@@ -13,6 +13,7 @@ interface MathService{
 			return 0;
 		}
 		
+		//static method for interface is allowed
 		public static int factorial(int num) {
 			return 0;
 		}
@@ -39,6 +40,9 @@ public class InterfaceMethods {
 			
 				MathService obj = new MathServiceImpl();
 				obj.isPrime(123);
+				MathService.factorial(10); //static methods are not override, it calls the declared type.
+				//extends a class or abstract class, you can call 
+				//subclassclassname.staticmethodfromsupperclass, but not for interface.
 				
 		}
 	

@@ -1,7 +1,12 @@
 package com.lwl.cj.day14;
 
 interface One {
-	void m1();
+	//data field : public static final by default
+	public static int x = 1;
+	void m1();  // method: public abstract by default
+	// if u add default before a method in interface, 
+	// you could implement it or not, and the concrete subclass
+	// doesn't have to override this method. 
 	default void m3() {
 		m1();
 	}

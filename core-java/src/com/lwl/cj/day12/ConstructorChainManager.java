@@ -4,9 +4,9 @@ class C1 {
 	static{
 		System.out.println("Static C1");
 	}
-	
+	int x = 10;
 	{
-		System.out.println("IIB C1");
+		System.out.println("IIB C1" + x);
 	}
 	C1() {
 		super();
@@ -19,9 +19,9 @@ class C2 extends C1 {
 	static{
 		System.out.println("Static C2");
 	}
-	
+	int x = 20; // Instance variables
 	{
-		System.out.println("IIB C2");
+		System.out.println("IIB C2" + x);
 	}
 	C2() {
 		super();
