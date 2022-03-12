@@ -24,7 +24,7 @@ public class ListAssignment {
 	public boolean searchElement(List<Integer> list,Integer key) {
 		return false;
 	}
-	// Desc | ASC 
+	// DSC | ASC 
 	public List<Integer> sort(List<Integer> list,String order){
 		
 		return null;

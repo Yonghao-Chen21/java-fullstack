@@ -15,3 +15,10 @@ interface
 		}
 
 
+
+1. Read data from csv
+2. Get all employee empno(ids)
+3. Get all employees of give department (Sales or Dev)
+4. Get max paid employees of each department 
+5. Get max salary difference between sales and Dev department 
+6. Get all employee details in sorting order by salary,empno desc
