@@ -60,7 +60,4 @@ public class Player {
 	public void setTeam(String team) {
 		this.team = team;
 	}
-	
-	
-	
 }
