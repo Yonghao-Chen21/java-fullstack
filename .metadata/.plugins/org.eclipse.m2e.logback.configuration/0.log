@@ -845,3 +845,13 @@ org.eclipse.jdt.core.JavaModelException: java-fullstack-feb does not exist
 2022-03-14 11:59:52,847 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
 2022-03-14 11:59:52,857 [Worker-45: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
 2022-03-14 11:59:52,858 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\ychen\java-fullstack-feb-remote\java-fullstack-feb\iplstat\src\test\resources
+2022-03-14 12:10:42,779 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2022-03-14 13:20:40,297 [Worker-10: Creating project "iplstat"] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.careerit:iplstat:0.0.1-SNAPSHOT @ C:\Users\ychen\java-fullstack-feb\iplstat\pom.xml.
+2022-03-14 13:20:40,580 [Worker-10: Creating project "iplstat"] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /iplstat/src/main/java
+2022-03-14 13:20:40,583 [Worker-10: Creating project "iplstat"] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /iplstat/src/main/resources
+2022-03-14 13:20:40,584 [Worker-10: Creating project "iplstat"] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /iplstat/src/test/java
+2022-03-14 13:20:40,585 [Worker-10: Creating project "iplstat"] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /iplstat/src/test/resources
+2022-03-14 13:20:41,152 [Worker-25: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-03-14 13:20:41,159 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-03-14 13:20:41,161 [Worker-25: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-03-14 13:20:41,163 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource

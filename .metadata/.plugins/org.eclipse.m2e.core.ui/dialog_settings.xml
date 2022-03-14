@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="C:\Users\ychen\java-fullstack-feb\core-java"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -13,7 +14,7 @@
 		</list>
 	</section>
 	<section name="MavenProjectWizardArchetypePage">
-		<item key="catalog" value="All Catalogs"/>
+		<item key="catalog" value="https://repo1.maven.org/maven2/archetype-catalog.xml"/>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
 			<item value="[artifactId]-TRUNK"/>
@@ -63,6 +64,7 @@
 	</section>
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="C:\Users\ychen\java-fullstack-feb-remote\java-fullstack-feb\iplstat"/>
 			<item value="D:\java-ws\java-fullstack-feb\java-playground"/>
 		</list>
 		<list key="projectNameTemplate">
@@ -73,5 +75,9 @@
 			<item value="[groupId].[artifactId]-[version]"/>
 			<item value="[name]"/>
 		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
 	</section>
 </section>
