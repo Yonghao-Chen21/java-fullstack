@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="DescName"/>
+		<item key="selection" value="plist"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="emplist"/>
+			<item value="p-&gt;p.getTeam()==teamName&amp;&amp;p.getRole()==role"/>
 			<item value="DescName"/>
 			<item value="sort"/>
 			<item value="package com.lwl.cj.day16;"/>
@@ -16,6 +18,7 @@
 			<item value="amount"/>
 		</list>
 		<list key="replacehistory">
+			<item value="plist"/>
 			<item value=""/>
 			<item value="price"/>
 		</list>
