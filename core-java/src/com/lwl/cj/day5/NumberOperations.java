@@ -43,12 +43,12 @@ public class NumberOperations {
 
 	private static int factorial(int num) {
 
-		return 0;
+		return num;
 	}
 
 	private static int reverse(int num) {
 
-		return 0;
+		return num;
 	}
 
 	private static boolean isAmstrong(int num) {

@@ -2,6 +2,8 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="C:\Users\ychen\java-fullstack-feb-myown\core-java"/>
+			<item value="C:\Users\ychen\java-fullstack-feb-myown"/>
 			<item value="C:\Users\ychen\java-fullstack-feb\core-java"/>
 		</list>
 		<list key="projectNameTemplate">
@@ -46,11 +48,13 @@
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
 			<item value="com.careerit"/>
+			<item value="stdservice.com"/>
 		</list>
 		<list key="name">
 		</list>
 		<list key="artifactId">
-			<item value="iplstat"/>
+			<item value="task1"/>
+			<item value="yhc"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
