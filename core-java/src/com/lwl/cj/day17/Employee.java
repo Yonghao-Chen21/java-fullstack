@@ -7,6 +7,13 @@ public class Employee {
 		private double salary;
 		private String dept;
 		
+		public Employee(Long empno, String name, double salary, String dept) {
+			super();
+			this.empno = empno;
+			this.name = name;
+			this.salary = salary;
+			this.dept = dept;
+		}
 		public Long getEmpno() {
 			return empno;
 		}
@@ -31,6 +38,11 @@ public class Employee {
 		public void setDept(String dept) {
 			this.dept = dept;
 		}
+		@Override
+		public String toString() {
+			return "Employee [empno=" + empno + ", name=" + name + ", salary=" + salary + ", dept=" + dept + "]";
+		}
+		
 		
 		
 }

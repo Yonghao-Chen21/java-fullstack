@@ -44,6 +44,9 @@ public class EmployeeServiceImpl implements EmployeeService {
 					  					.filter(e->e.getDept().equals(dept)&&e.getSalary()==maxs)
 					  					.collect(Collectors.toList());
 			rs.addAll(tmp);
+//			empList.stream()
+//				.filter(e->e.getDept().equals(dept)&&e.getSalary()==maxs)
+//				.forEach(e->rs.add(e));
 		}
 		
 		
