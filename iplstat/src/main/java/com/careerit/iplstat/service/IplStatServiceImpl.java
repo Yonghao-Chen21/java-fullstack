@@ -5,9 +5,12 @@ import java.util.Map;
 
 import com.careerit.iplstat.domain.Player;
 import com.careerit.iplstat.dto.RoleAmountDTO;
+import com.careerit.iplstat.util.CsvReaderUtil;
 
 public class IplStatServiceImpl implements IplStatService {
 
+	CsvReaderUtil readerUtil = CsvReaderUtil.obj;
+	
 	@Override
 	public List<Player> getPlayers(String teamName) {
 		// TODO Auto-generated method stub
