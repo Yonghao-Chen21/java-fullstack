@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Map;
 
 import com.careerit.iplstat.domain.Player;
+import com.careerit.iplstat.dto.PlayerTeamDTO;
 import com.careerit.iplstat.dto.RoleAmountDTO;
 
 public interface IplStatService {
@@ -27,6 +28,8 @@ public interface IplStatService {
 			public List<Player> getAllPlayersSortByAmount();
 			
 			public Map<String,List<RoleAmountDTO>> getTeamRoleAmount();
+			
+			public List<PlayerTeamDTO> getPlayerWithTeamDetails();
 			
 			
 			

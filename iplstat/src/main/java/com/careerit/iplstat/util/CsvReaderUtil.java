@@ -1,9 +1,7 @@
 package com.careerit.iplstat.util;
 
-import java.io.File;
 import java.io.IOException;
 import java.net.URISyntaxException;
-import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
@@ -18,7 +16,7 @@ public enum CsvReaderUtil {
 	public List<Player> loadPlayers() {
 		List<Player> list = new ArrayList<Player>();
 		try {
-			List<String> dlist = Files.readAllLines(Paths.get(CsvReaderUtil.class.getResource("/ipl_2022_data.csv").toURI()));
+			List<String> dlist = Files.readAllLines(Paths.get(CsvReaderUtil.class.getResource("/player.csv").toURI()));
 			for (int i = 1; i < dlist.size(); i++) {
 				String[] data = dlist.get(i).split(",");
 				String name = data[0];
