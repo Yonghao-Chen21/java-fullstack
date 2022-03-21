@@ -6,6 +6,8 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.careerit.task1.domain.Batch;
+import com.careerit.task1.domain.Qualification;
 import com.careerit.task1.domain.Student;
 
 public final class CsvReaderUtil {
@@ -21,12 +23,19 @@ public final class CsvReaderUtil {
 			for (int i = 1; i < tmp.size(); i++) {
 				String[] data = tmp.get(i).split(",");
 				String name = data[0];
-				String batch = data[1];
+				Batch batch = Batch.valueOf(data[1]);
 				boolean completed = data[2].equals("Y") ? true : false;
 				boolean placed = data[3].equals("Y") ? true : false;
-				String qualification = data[4];
+				Qualification qualification = Qualification.valueOf(data[4].replace(" ","_").replace(".","_"));
 				double score = Double.parseDouble(data[5]);
-				rs.add(new Student(name,batch,completed,placed,qualification,score));
+				rs.add(new Student.StudentBuilder()
+								  .name(name)
+								  .batch(batch)
+								  .completed(completed)
+								  .placed(placed)
+								  .qualification(qualification)
+								  .score(score)
+								  .build());
 			}
 		} catch (IOException e) {
 			e.printStackTrace();

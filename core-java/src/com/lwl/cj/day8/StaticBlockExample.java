@@ -22,6 +22,8 @@ public class StaticBlockExample {
 		out.println(sqrt(9));
 		out.println(pow(2, 5));
 		out.println("Some random text");
+		StaticBlockExample.Inner obj = new StaticBlockExample.Inner();
+		obj.innerMethod();
 	}
 
 	static {
@@ -29,6 +31,9 @@ public class StaticBlockExample {
 	}
 	
 	static class Inner{
+		public void innerMethod() {
+			System.out.println("Inner method");
+		}
 		
 	}
 }

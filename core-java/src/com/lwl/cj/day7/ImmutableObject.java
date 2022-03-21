@@ -9,7 +9,7 @@ public class ImmutableObject {
 				StringBuilder message = new StringBuilder("");
 				
 				for(String name:names) {
-					message.append("Welcome "+name+"\n");
+					message.append("Welcome "+name+"\n"); //using StringBuilder to create new message;
 				}
 				System.out.println(message);
 		

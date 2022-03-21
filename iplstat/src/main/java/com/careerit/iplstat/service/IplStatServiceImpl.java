@@ -121,12 +121,10 @@ public class IplStatServiceImpl implements IplStatService {
 
 	@Override
 	public List<Player> getAllPlayersSortByAmount() {
-		// TODO Auto-generated method stub
 		return getPlayersSortByAmount(plist);
 	}
 
 	public List<Player> getPlayersSortByAmount(String teamName) {
-		// TODO Auto-generated method stub
 		List<Player> players = getPlayers(teamName);
 		return getPlayersSortByAmount(players);
 	}

@@ -32,6 +32,7 @@ public class QuestionServiceImpl implements QuestionService {
 		}
 		input.close();
 		answers = rs;
+
 	}
 
 	@Override

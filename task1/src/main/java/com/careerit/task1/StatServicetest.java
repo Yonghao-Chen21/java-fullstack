@@ -1,5 +1,7 @@
 package com.careerit.task1;
 
+import com.careerit.task1.domain.Batch;
+import com.careerit.task1.domain.Qualification;
 import com.careerit.task1.service.StdServiceImpl;
 
 public class StatServicetest {
@@ -8,9 +10,9 @@ public class StatServicetest {
 
 		// 1. Get all students whose qualification is (BE/MCA/BSC)
 		System.out.println("All students with BCA: ");
-		obj.studentsByQualification("BCA").stream().forEach(System.out::println);
+		obj.studentsByQualification(Qualification.BCA).stream().forEach(System.out::println);
 		// 2. Get count of all the students by qualification
-		System.out.println("Count students with BCA: " + obj.getStudentCountByQualification("BCA"));
+		System.out.println("Count students with BCA: " + obj.getStudentCountByQualification(Qualification.BCA));
 		// 3. Get count of students who got placed
 		System.out.println("Count students who got placed: " + obj.getPlacedStudentCount());
 		// 4. Get count of student who completed course but not placed
@@ -20,7 +22,7 @@ public class StatServicetest {
 		// 6. Search student by the given name
 		System.out.println("Students with name BALL: " + obj.search("BALL"));
 		// 7. Get average success rate of the given batch
-		System.out.println("Success rate in BCJ4 : " + obj.successRate("BCJ4"));
+		System.out.println("Success rate in BCJ4 : " + obj.successRate(Batch.BCJ4));
 		// 8. Get max percentage scored Student details
 		System.out.println("Max score student : ");
 		obj.maxScoreStudent().stream().forEach(System.out::println);

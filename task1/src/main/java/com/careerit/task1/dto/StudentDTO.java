@@ -1,5 +1,7 @@
 package com.careerit.task1.dto;
 
+import com.careerit.task1.domain.Qualification;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
@@ -7,7 +9,7 @@ import lombok.Data;
 @AllArgsConstructor
 public class StudentDTO {
 	private String name;
-    private String qualification;
+    private Qualification qualification;
     private double score;
 
 }

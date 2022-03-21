@@ -3,6 +3,7 @@
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
 			<item value="C:\Users\ychen\java-fullstack-feb-myown\core-java"/>
+			<item value="C:\Users\ychen\Documents\Java_Full_Stack\Module1\java-playground"/>
 			<item value="C:\Users\ychen\java-fullstack-feb-myown"/>
 			<item value="C:\Users\ychen\java-fullstack-feb\core-java"/>
 		</list>
@@ -47,14 +48,12 @@
 	</section>
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
-			<item value="com.careerit"/>
-			<item value="stdservice.com"/>
+			<item value="careerit.com"/>
 		</list>
 		<list key="name">
 		</list>
 		<list key="artifactId">
-			<item value="task1"/>
-			<item value="yhc"/>
+			<item value="iplstat-jdbc"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -70,6 +69,7 @@
 	</section>
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="C:\Users\ychen\java-fullstack-feb-myown\task1"/>
 			<item value="C:\Users\ychen\java-fullstack-feb-remote\java-fullstack-feb\iplstat"/>
 			<item value="D:\java-ws\java-fullstack-feb\java-playground"/>
 		</list>

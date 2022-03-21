@@ -7,6 +7,8 @@ import java.util.Set;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
+import com.careerit.task1.domain.Batch;
+import com.careerit.task1.domain.Qualification;
 import com.careerit.task1.domain.Student;
 import com.careerit.task1.dto.CountDTO;
 import com.careerit.task1.dto.StudentDTO;
@@ -21,8 +23,8 @@ public class StdServiceImpl implements StdService {
 		this.astudents = CsvReaderUtil.getStudents();
 	}
 
-	public Set<String> getUniqueTypes(String type) {
-		List<String> all = new ArrayList<>();
+	public Set<Object> getUniqueTypes(String type) {
+		List<Object> all = new ArrayList<>();
 		switch (type) {
 		case "name":
 			all = astudents.stream().map(p -> p.getName()).collect(Collectors.toList());
@@ -33,8 +35,8 @@ public class StdServiceImpl implements StdService {
 		case "qualification":
 			all = astudents.stream().map(p -> p.getQualification()).collect(Collectors.toList());
 		}
-		Set<String> uniques = new HashSet<>();
-		for (String ele : all) {
+		Set<Object> uniques = new HashSet<>();
+		for (Object ele : all) {
 			uniques.add(ele);
 		}
 		return uniques;
@@ -45,13 +47,13 @@ public class StdServiceImpl implements StdService {
 	}
 
 	@Override
-	public List<Student> studentsByQualification(String qualification) {
+	public List<Student> studentsByQualification(Qualification qualification) {
 		// Get all students whose qualification is (BE/MCA/BSC)
 		return getStudents(s -> s.getQualification().equals(qualification));
 	}
 
 	@Override
-	public int getStudentCountByQualification(String qualification) {
+	public int getStudentCountByQualification(Qualification qualification) {
 		// Get count of all the students by qualification
 		return studentsByQualification(qualification).size();
 	}
@@ -82,7 +84,7 @@ public class StdServiceImpl implements StdService {
 	}
 
 	@Override
-	public float successRate(String batchName) {
+	public float successRate(Batch batchName) {
 		// Get average success rate of the given batch
 		List<Student> students = getStudents(s -> s.getBatch().equals(batchName));
 		List<Student> successStudents = getStudents(s -> s.getBatch().equals(batchName) && s.getScore() >= 60);

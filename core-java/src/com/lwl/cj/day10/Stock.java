@@ -17,6 +17,7 @@ public class Stock {
 		}
 
 		@Override
+		//equals(Object) overwrite: 1. == 2. if null 3. getCalss() 4. type casting to class 5. compare elements.
 		public boolean equals(Object obj) {
 			if (this == obj)
 				return true;

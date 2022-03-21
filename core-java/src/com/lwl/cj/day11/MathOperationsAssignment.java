@@ -9,7 +9,7 @@ public class MathOperationsAssignment {
 		System.out.println(obj.add(1,2,3,4,5));
 		System.out.println(Arrays.toString(obj.generatePrime(5)));
 		System.out.println(Arrays.toString(obj.generatePrime(2,10)));
-		System.out.println(obj.search(new String[] {"AA","BB","CC"},"AA","BB","CC"));
+		System.out.println(obj.search(new String[] {"AA","BB","CC"},"AA","BB","CC","DD"));
 	}
 	
 	public int add(int a,int b) {
@@ -78,16 +78,12 @@ public class MathOperationsAssignment {
 		return false;
 	}
 	public boolean search(String[] arr,String... args) {
-		int count = 0;
 		for (String str : args) {
-			if(search(arr,str)) {
-				count++;
+			if(! search(arr,str)) {
+				return false;
 			}
 		}
-		if (count == args.length) {
-			return true;
-		}
-		return false;
+		return true;
 	}
 }
 
