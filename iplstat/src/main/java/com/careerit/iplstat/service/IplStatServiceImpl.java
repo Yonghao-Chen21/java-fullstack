@@ -1,9 +1,11 @@
 package com.careerit.iplstat.service;
 
+import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Types;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -18,6 +20,29 @@ public class IplStatServiceImpl implements IplStatService {
 
 	private ConnectionUtil conUtil = ConnectionUtil.obj;
 	
+	
+	public void callProcedure() {
+		Connection con = null;
+		CallableStatement cst = null;
+		try {
+			con = conUtil.getConnection();
+			cst=con.prepareCall("{call total_amount_team(?,?)}");
+			cst.setString(1, "RCB");
+			cst.registerOutParameter(2, Types.FLOAT);
+			cst.execute();
+			System.out.println(cst.getFloat(2));
+		} catch (SQLException e) {
+			System.out.println("While connecting with db :" + e);
+		} finally {
+			conUtil.close(cst, con);
+		}
+		
+	}
+	
+	public static void main(String[] args) {
+		IplStatServiceImpl obj = new IplStatServiceImpl();
+		obj.callProcedure();
+	}
 	@Override
 	public List<Player> getPlayers(String teamName) {
 		String sql_str = "select pid,name,role,country,price,team from emp where team=?";
@@ -106,5 +131,6 @@ public class IplStatServiceImpl implements IplStatService {
 		// TODO Auto-generated method stub
 		return null;
 	}
+	
 
 }
