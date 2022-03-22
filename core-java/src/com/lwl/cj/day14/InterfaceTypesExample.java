@@ -5,6 +5,7 @@ interface I1 {
 
 }
 
+// Cloneable is a marker interface
 class Product implements Cloneable {
 	int pid;
 	String pname;
@@ -34,6 +35,7 @@ class Product implements Cloneable {
 interface I2 {
 
 	int biggest(int a, int b);
+	// use default and it could be materialized 
 	default void m1() {
 		System.out.println("m1");
 	}
@@ -51,7 +53,7 @@ public class InterfaceTypesExample {
 //		System.out.println(p1);
 //		System.out.println(p2);
 		
-		I2 obj = (a,b)-> a > b ? a:b; //only if interface has just one abstract method;
+		I2 obj = (a,b)-> a > b ? a:b; //only if interface has just one abstract method; use this to create an object of subclass with the method quickly.
 		System.out.println(obj.biggest(3, 5));
 		obj.m1();
 	}

@@ -4,6 +4,8 @@ abstract class Three {
 	abstract void m2();
 }
 
+// abstract class doesn't have to have an abstract method
+// if one abstract class extends a abstract class, it doesn't have to override its method  
 abstract class One extends Three {
 
 	private int x = 10;
@@ -73,7 +75,7 @@ public class AbstractManager {
 			Two ref = (Two)obj;
 			ref.m1();
 			ref.m2();
-			System.out.println(ref.getX());// because it's not override so it's bound with x in super class
+			System.out.println(ref.getX());// because local variable x is not override,  so it's bound with x in super class, getX() return 10
 			System.out.println("----------------------------");
 		}
 		

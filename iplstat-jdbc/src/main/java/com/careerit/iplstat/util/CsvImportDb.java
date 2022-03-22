@@ -56,7 +56,7 @@ public class CsvImportDb {
 	}
 
 	public static void main(String[] args) {
-		List<Team> teams = CsvReaderUtilTeam.obj.loadTeams();
+		List<Team> teams = CsvReaderUtil.obj.loadTeams();
 		List<Player> players = CsvReaderUtil.obj.loadPlayers();
 		addPlayer(players);
 		addTeam(teams);

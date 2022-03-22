@@ -20,8 +20,11 @@ class B extends A {
 public class Test {
     public static void main(String[] args) {
 
-        // prints: Inside static method of this class
+        // superclass static method could be hidden if there is the same signature  
+    	// prints: Inside static method of this class
         B.display();
+        B obj = new B();
+        obj.show();
 
  
         // prints: Inside static method of superclass

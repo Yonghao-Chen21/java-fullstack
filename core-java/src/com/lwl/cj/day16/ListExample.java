@@ -56,6 +56,7 @@ public class ListExample {
 			}
 		}
 		System.out.println("-----------------------------------------");
+		// transfer a list to a list iterator
 		ListIterator<Integer> listItr = list1.listIterator();
 		while (listItr.hasNext()) {
 			Integer ele = listItr.next();

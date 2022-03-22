@@ -13,7 +13,7 @@ interface MathService{
 			return 0;
 		}
 		
-		//static method for interface is allowed
+		//static method for interface is allowed and you don't need to add default
 		public static int factorial(int num) {
 			return 0;
 		}
