@@ -46,7 +46,6 @@ public class MapIplExample {
 					map.putIfAbsent(teamName, new ArrayList<Player>());
 					List<Player> list = map.get(teamName);
 					list.add(ele);
-					map.put(teamName, list);
 			}
 			
 			// Display team name and player count
@@ -61,12 +60,13 @@ public class MapIplExample {
 					String teamName = entry.getKey();
 					double sum = entry.getValue().stream().mapToDouble(p->p.getPrice()).sum();
 		     		System.out.println(teamName +" Rs: "+NumberFormat.getInstance().format(sum));
+		     		// format number : NumberFormat.getInstance().format(num)
 			});
 			
 			// Get total amount spent by all the teams
 			
 			double sum = map.values().stream()
-									 .flatMap(ele->ele.stream())
+									 .flatMap(ele->ele.stream()) // flatMap(ele->ele.stream()). it makes the ele to stream
 									 .collect(Collectors.toList())
 				                     .stream()
 				                     .mapToDouble(p->p.getPrice()).sum();

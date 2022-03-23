@@ -3,7 +3,7 @@ package com.lwl.cj.day22;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
-
+// https://jsltech.blogspot.com/2012/05/reflection-api-in-java.html
 class MyList<T> {
 
 	private Object[] obj;

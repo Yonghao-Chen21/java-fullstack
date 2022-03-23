@@ -7,10 +7,8 @@
     <fullyQualifiedTypeName name="java.util.HashSet"/>
     <fullyQualifiedTypeName name="com.careerit.iplstat.service.IplStatServiceImpl"/>
     <fullyQualifiedTypeName name="java.util.Set"/>
-    <fullyQualifiedTypeName name="com.careerit.iplstat.domain.Player"/>
     <fullyQualifiedTypeName name="java.util.Comparator"/>
     <fullyQualifiedTypeName name="com.careerit.iplstat.util.CsvReaderUtil"/>
-    <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="com.careerit.task1.util.CsvReaderUtil"/>
     <fullyQualifiedTypeName name="com.careerit.task1.dto.CountDTO"/>
     <fullyQualifiedTypeName name="com.careerit.task1.dto.StudentDTO"/>
@@ -20,18 +18,23 @@
     <fullyQualifiedTypeName name="java.util.Map"/>
     <fullyQualifiedTypeName name="com.careerit.task2.domain.Question"/>
     <fullyQualifiedTypeName name="java.util.HashMap"/>
-    <fullyQualifiedTypeName name="lombok.AllArgsConstructor"/>
     <fullyQualifiedTypeName name="com.careerit.task2.dto.ResultDTO"/>
     <fullyQualifiedTypeName name="com.careerit.task2.util.CsvReaderUtil"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="java.util.stream.Collectors"/>
     <fullyQualifiedTypeName name="com.careerit.task2.service.QuestionServiceImpl"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.nio.file.Files"/>
     <fullyQualifiedTypeName name="java.nio.file.Paths"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="com.careerit.task1.domain.Qualification"/>
     <fullyQualifiedTypeName name="com.careerit.task1.domain.Batch"/>
     <fullyQualifiedTypeName name="lombok.Getter"/>
     <fullyQualifiedTypeName name="lombok.Data"/>
+    <fullyQualifiedTypeName name="com.careerit.iplstat.domain.Team"/>
+    <fullyQualifiedTypeName name="com.careerit.iplstat.domain.Player"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="java.sql.Statement"/>
+    <fullyQualifiedTypeName name="lombok.AllArgsConstructor"/>
+    <fullyQualifiedTypeName name="com.careerit.iplstat.domain.PlayerRole"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
 </qualifiedTypeNameHistroy>

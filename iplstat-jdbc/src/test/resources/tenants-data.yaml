@@ -1,0 +1,19 @@
+tenants: 
+  - name: Dell 
+    dbName: client1 
+    user: user
+    password: user
+    port: 3306
+    host: localhost
+  - name: Lenovo 
+    dbName: client2
+    user: user
+    password: password
+    port: 3306
+    host: localhost
+  - name: Sony 
+    dbName: client3
+    user: user
+    password: password
+    port: 3306
+    host: localhost

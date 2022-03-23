@@ -1,0 +1,34 @@
+---
+orderNo: A001
+date: 2019-04-17
+customerName: Customer, Joe
+orderLines:
+    - item: No. 9 Sprockets
+      quantity: 12
+      unitPrice: 1.23
+    - item: Widget (10mm)
+      quantity: 5
+      unitPrice: 3.45
+
+---
+orderNo: A002
+date: 2021-04-17
+customerName: Customer, Krish
+orderLines:
+    - item: Basketball
+      quantity: 12
+      unitPrice: 6.23
+    - item: Widget (10mm)
+      quantity: 4
+      unitPrice: 3.45
+---
+orderNo: A003
+date: 2022-03-17
+customerName: Customer, John
+orderLines:
+    - item: Badmintion Rocket
+      quantity: 12
+      unitPrice: 5.23
+    - item: Widget (10mm)
+      quantity: 8
+      unitPrice: 3.45
