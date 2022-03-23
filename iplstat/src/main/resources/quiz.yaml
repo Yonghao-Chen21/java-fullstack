@@ -1,0 +1,52 @@
+---
+title: Technology
+questions:
+- question: Java has how many primitive data types?
+  options:
+  - '4'
+  - '5'
+  - '6'
+  - '8'
+  answer: '8'
+- question: What is super class for every class in java?
+  options:
+  - String
+  - Object
+  - Math
+  - System
+  answer: '8'
+- question: Which of the following is not a valid java.lang.Object class method
+  options:
+  - toString
+  - clone
+  - getClass
+  - finally
+  answer: finally
+- question: " a = 10; b = 20 ; c = 30; d=(a>b&&a>c)?a:(b>c)?b:c; what is d value ?"
+  options:
+  - '10'
+  - '20'
+  - '30'
+  - '40'
+  answer: '30'
+- question: What is the output of the 10 >> 1 ?
+  options:
+  - '10'
+  - '5'
+  - '20'
+  - '0'
+  answer: '5'
+- question: Which of the following is not a valid java.lang.String class method?
+  options:
+  - length
+  - height
+  - contact
+  - trim
+  answer: 'height'
+- question: Which of the following is a valid java.lang.String class method?
+  options:
+  - length
+  - reverse
+  - charat
+  - lighttrim
+  answer: 'length'

@@ -31,4 +31,6 @@ public class MathOperationsTest {
 				int expected = 10;
 				assertEquals(expected, obj.max(a, b));
 			}
+			
+			
 }
