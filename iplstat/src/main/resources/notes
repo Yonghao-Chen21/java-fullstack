@@ -1,0 +1,61 @@
+AppUser
+
+id
+name
+password
+email unique
+dob
+mobile unique
+
+contact
+
+cid
+
+name
+email
+mobile
+dob
+status
+
+ContactService
+AppUserService
+
+register(AppUser)
+login(String username,String password)
+getUserProfile(Long uid) <id,name,email>
+
+//Logics
+
+ContactDaoAppUser
+
+id
+name
+password
+email unique
+dob
+mobile unique
+
+contact
+
+cid
+
+name
+email
+mobile
+dob
+status
+
+ContactService
+AppUserService
+
+register(AppUser)
+login(String username,String password)
+getUserProfile(Long uid) <id,name,email>
+
+//Logics
+
+ContactDao
+
+register(AppUser)
+login(String username,String password)
+getUserProfile(Long uid) <id,name,email>
