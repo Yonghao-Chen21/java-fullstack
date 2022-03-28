@@ -68,6 +68,9 @@ public class QuizService {
 		Quiz quiz = null;
 		try {
 			quiz = obj.readValue(this.getClass().getResourceAsStream("/quiz.json"), Quiz.class);
+			//The getResourceAsStream() method is used to get the resource with the specified resource of this class. 
+			//The method returns the specified resource of this class in the form of InputStream object.
+			//https://docs.oracle.com/javase/8/docs/api/java/lang/ClassLoader.html#getResource-java.lang.String-
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

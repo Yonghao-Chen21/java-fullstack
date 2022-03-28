@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="C:\Users\ychen\cbook"/>
 			<item value="C:\Users\ychen\java-fullstack-feb-myown\core-java"/>
 			<item value="C:\Users\ychen\Documents\Java_Full_Stack\Module1\java-playground"/>
 			<item value="C:\Users\ychen\java-fullstack-feb-myown"/>
@@ -48,12 +49,13 @@
 	</section>
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
-			<item value="careerit.com"/>
+			<item value="com.careerit"/>
 		</list>
 		<list key="name">
 		</list>
 		<list key="artifactId">
-			<item value="iplstat-jdbc"/>
+			<item value="contactbook"/>
+			<item value="iplstat"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -85,5 +87,17 @@
 	<section name="org.eclipse.m2e.core.pom.overview">
 	</section>
 	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="MavenModuleWizardParentPage">
+		<list key="moduleName">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
 	</section>
 </section>

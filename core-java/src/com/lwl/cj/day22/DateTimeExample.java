@@ -1,7 +1,6 @@
 package com.lwl.cj.day22;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class DateTimeExample {
