@@ -1,0 +1,7 @@
+
+Team Stats
+
+Team Details
+ 
+      Team names <drop down> when select team name then it should display all the players of the selected team
+      
