@@ -121,7 +121,7 @@ public class StreemExample {
 					namesList.add("Aadhaya");
 					namesList.add("Ramesh");
 					
-					List<Integer> llist = namesList.stream().map(e->e.length()).collect(Collectors.toList());
+					//List<Integer> llist = namesList.stream().map(e->e.length()).collect(Collectors.toList());
 					
 					// Get length of all names, name starts with A and length should be more 5 characters
 					
