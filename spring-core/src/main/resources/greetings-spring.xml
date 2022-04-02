@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+       
+	<bean name="greetings" class="com.careerit.sl.core.Greetings">
+		<property name="message" value="Wish you happy spring learning..."></property>
+	</bean>
+	<bean name="greetingService" class="com.careerit.sl.core.GreetingService">
+		<property name="userName" value="User"></property>
+		<property name="greetings" ref="greetings"></property>
+	</bean>
+</beans>
