@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.util.function.Predicate"/>
-    <fullyQualifiedTypeName name="com.careerit.task1.service.StdServiceImpl"/>
-    <fullyQualifiedTypeName name="com.careerit.task1.domain.Student"/>
-    <fullyQualifiedTypeName name="com.careerit.task2.domain.Question"/>
-    <fullyQualifiedTypeName name="com.careerit.task2.dto.ResultDTO"/>
     <fullyQualifiedTypeName name="com.careerit.task2.util.CsvReaderUtil"/>
     <fullyQualifiedTypeName name="java.util.stream.Collectors"/>
     <fullyQualifiedTypeName name="com.careerit.task2.service.QuestionServiceImpl"/>
@@ -51,13 +46,18 @@
     <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
     <fullyQualifiedTypeName name="com.careerit.shopc.domain.Item"/>
     <fullyQualifiedTypeName name="com.careerit.shopc.dto.Order"/>
+    <fullyQualifiedTypeName name="javax.servlet.http.HttpServlet"/>
+    <fullyQualifiedTypeName name="lombok.AllArgsConstructor"/>
+    <fullyQualifiedTypeName name="lombok.Data"/>
+    <fullyQualifiedTypeName name="com.careerit.sc.domain.Product"/>
+    <fullyQualifiedTypeName name="com.careerit.sc.domain.ProductType"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="java.util.Map"/>
     <fullyQualifiedTypeName name="java.util.HashMap"/>
     <fullyQualifiedTypeName name="com.careerit.sc.service.ScServiceImpl"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
-    <fullyQualifiedTypeName name="javax.servlet.http.HttpServlet"/>
-    <fullyQualifiedTypeName name="com.careerit.sc.domain.Product"/>
-    <fullyQualifiedTypeName name="lombok.AllArgsConstructor"/>
-    <fullyQualifiedTypeName name="lombok.Data"/>
-    <fullyQualifiedTypeName name="com.careerit.sc.domain.ProductType"/>
+    <fullyQualifiedTypeName name="com.careerit.shoppingemsapp.core.GreetingService"/>
+    <fullyQualifiedTypeName name="com.careerit.shoppingcartapp.repo.ProductRepo"/>
+    <fullyQualifiedTypeName name="com.careerit.shoppingcartapp.service.exception.ProductNotFoundException"/>
+    <fullyQualifiedTypeName name="com.careerit.shoppingcartapp.service.ProductService"/>
+    <fullyQualifiedTypeName name="com.careerit.shoppingcartapp.domain.Product"/>
 </qualifiedTypeNameHistroy>

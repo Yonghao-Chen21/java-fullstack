@@ -1,30 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="getInstance"/>
+		<item key="selection" value="Logout"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="logout"/>
+			<item value="readonly"/>
+			<item value="float"/>
+			<item value="placeholder"/>
+			<item value="listpage"/>
+			<item value="form"/>
+			<item value="Logout"/>
+			<item value="log"/>
+			<item value="Edit Products"/>
+			<item value="List"/>
+			<item value="document"/>
 			<item value="getInstance"/>
 			<item value="addId"/>
 			<item value="editId"/>
 			<item value="productId"/>
-			<item value="formatter"/>
-			<item value="private"/>
-			<item value="package com.careerit.iplstat;"/>
-			<item value="&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;"/>
-			<item value="getUniqueTypes"/>
-			<item value="package com.careerit.task2.util;"/>
-			<item value="package com.careerit.task1;"/>
-			<item value="//1. Get all students whose qualification is (BE/MCA/BSC) "/>
-			<item value="emplist"/>
-			<item value="p-&gt;p.getTeam()==teamName&amp;&amp;p.getRole()==role"/>
-			<item value="DescName"/>
 		</list>
 		<list key="replacehistory">
+			<item value="double"/>
 			<item value="editId"/>
 			<item value="addId"/>
 			<item value="removeId"/>
@@ -35,8 +36,8 @@
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="1082"/>
-		<item key="DIALOG_Y_ORIGIN" value="402"/>
+		<item key="DIALOG_X_ORIGIN" value="1577"/>
+		<item key="DIALOG_Y_ORIGIN" value="382"/>
 		<item key="DIALOG_WIDTH" value="414"/>
 		<item key="DIALOG_HEIGHT" value="454"/>
 		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
