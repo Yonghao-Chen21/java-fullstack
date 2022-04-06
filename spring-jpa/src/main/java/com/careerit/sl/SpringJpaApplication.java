@@ -38,31 +38,29 @@ public class SpringJpaApplication implements CommandLineRunner {
 	@Override
 	@Transactional
 	public void run(String... args) throws Exception {
-		
+
 		List<TeamDto> teamDtolist = getTeams();
 		List<PlayerDto> playerList = getPlayers();
-		
-		for(TeamDto obj:teamDtolist) {
-				System.out.println(obj.getTeamCode()+" "+playerList.get(0).getTeamCode());
-				List<PlayerDto> players = playerList.stream().filter(p->p.getTeamCode().equals(obj.getTeamCode())).collect(Collectors.toList());
-				System.out.println(players.size());
-				TeamDetails teamDetails = new TeamDetails();
-				teamDetails.setTeamCode(obj.getTeamCode());
-				teamDetails.setTeamName(obj.getTeamName());
-				teamDetails = teamDetailsRepo.save(teamDetails);
-				TeamDetails t = teamDetails;
-				List<Player> plist = players.stream().map(p->convertPlayer(p,t)).collect(Collectors.toList());
-				teamDetails.addPlayers(plist);
-				teamDetailsRepo.save(teamDetails);
-			
+
+		for (TeamDto obj : teamDtolist) {
+			System.out.println(obj.getTeamCode() + " " + playerList.get(0).getTeamCode());
+			List<PlayerDto> players = playerList.stream().filter(p -> p.getTeamCode().equals(obj.getTeamCode()))
+					.collect(Collectors.toList());
+			System.out.println(players.size());
+			TeamDetails teamDetails = new TeamDetails();
+			teamDetails.setTeamCode(obj.getTeamCode());
+			teamDetails.setTeamName(obj.getTeamName());
+			List<Player> plist = players.stream().map(p -> convertPlayer(p)).collect(Collectors.toList());
+			for (Player p : plist) {
+				teamDetails.addPlayer(p);
+			}
+			teamDetailsRepo.save(teamDetails);
+
 		}
-		
 
 	}
-
-	private Player convertPlayer(PlayerDto p,TeamDetails t) {
-		
-			return Player.builder().name(p.getName()).role(p.getRole()).price(p.getPrice()).country(p.getCountry()).teamDetails(t).build();
+	private Player convertPlayer(PlayerDto p) {
+		return Player.builder().name(p.getName()).role(p.getRole()).price(p.getPrice()).country(p.getCountry()).build();
 	}
 
 	private List<PlayerDto> getPlayers() {

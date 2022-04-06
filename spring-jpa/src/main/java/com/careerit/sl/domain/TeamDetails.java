@@ -33,11 +33,10 @@ public class TeamDetails {
 	
 	public void addPlayer(Player player) {
 			this.playerList.add(player);
+			player.setTeamDetails(this);
 	}
-	public void addPlayers(List<Player> player) {
-		this.playerList.addAll(player);
-}
-	public void removePlayer(Player player) {
+		public void removePlayer(Player player) {
 			this.playerList.remove(player);
+			player.setTeamDetails(null);
 	}
 }
