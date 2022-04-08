@@ -71,6 +71,7 @@
 	</section>
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="C:\Users\ychen\java-fullstack-feb-myown\jpal"/>
 			<item value="C:\Users\ychen\java-fullstack-feb-myown\shopping-cart-app"/>
 			<item value="C:\Users\ychen\java-fullstack-feb-myown\shopping-ems-app"/>
 			<item value="C:\Users\ychen\java-fullstack-feb-remote\java-fullstack-feb\spring-ems-app"/>

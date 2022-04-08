@@ -58,7 +58,7 @@ public class PlayerServiceImpl implements PlayerService {
 
 	@Override
 	public List<PlayerDTO> getPlayerByTeam(String label) {
-		List<Player> players = playerRepo.findAllByTeamCode(label);
+		List<Player> players = playerRepo.findByTeamLabel(label);
 		List<PlayerDTO> rs = new ArrayList<>();
 		for (Player p : players) {
 			rs.add(new PlayerDTO(p.getName(), p.getRole(), p.getPrice()));
@@ -71,7 +71,7 @@ public class PlayerServiceImpl implements PlayerService {
 		List<RoleCountDTO> rs = new ArrayList<>();
 		List<String> roles = getRoles();
 		for (String r : roles) {
-			int count = playerRepo.countByRoleAndTeamCode(r, label);
+			int count = playerRepo.countByRoleAndTeamLabel(r, label);
 			rs.add(new RoleCountDTO(r, count));
 		}
 
@@ -81,7 +81,7 @@ public class PlayerServiceImpl implements PlayerService {
 	@Override
 	public List<PlayerDTO> getPlayerByTeamAndRole(String label, String role) {
 		List<PlayerDTO> rs = new ArrayList<>();
-		List<Player> players = playerRepo.findByRoleAndTeamCode(role, label);
+		List<Player> players = playerRepo.findByRoleAndTeamLabel(role, label);
 		for (Player p : players) {
 			rs.add(new PlayerDTO(p.getName(), p.getRole(), p.getPrice()));
 		}
@@ -93,7 +93,8 @@ public class PlayerServiceImpl implements PlayerService {
 		List<Team> teams = teamRepo.findAll();
 		List<TeamDTO> rs = new ArrayList<>();
 		for (Team t : teams) {
-			rs.add(new TeamDTO(t.getCity(), t.getHome(), t.getCoach(), t.getName(), t.getLabel()));
+			rs.add(TeamDTO.builder().city(t.getCity()).home(t.getHome()).coach(t.getCoach()).name(t.getName())
+					.label(t.getLabel()).build());
 		}
 		return rs;
 	}
@@ -132,15 +133,15 @@ public class PlayerServiceImpl implements PlayerService {
 	@Override
 	public List<PlayerDTO> getPlayersBySort(String fieldName) {
 		List<Player> players = new ArrayList<>();
-		switch (fieldName){
-		case "name" :
+		switch (fieldName) {
+		case "name":
 			players = playerRepo.findAllByOrderByNameAsc();
 			break;
-		case "role" :
+		case "role":
 			players = playerRepo.findAllByOrderByRoleAsc();
 			break;
 		case "price":
-			players = playerRepo.findAllByOrderByPriceAsc();		
+			players = playerRepo.findAllByOrderByPriceAsc();
 		}
 		List<PlayerDTO> rs = new ArrayList<>();
 		for (Player p : players) {
@@ -153,7 +154,7 @@ public class PlayerServiceImpl implements PlayerService {
 	public Map<String, List<PlayerDTO>> getMaxPaidPlayersByRole() {
 		Map<String, List<PlayerDTO>> rs = new HashMap<>();
 		List<String> roles = getRoles();
-		for (String r:roles) {
+		for (String r : roles) {
 			List<PlayerDTO> list = new ArrayList<>();
 			List<Player> players = playerRepo.findWithMaxPriceAndByRole(r);
 			for (Player p : players) {
@@ -161,16 +162,16 @@ public class PlayerServiceImpl implements PlayerService {
 			}
 			rs.put(r, list);
 		}
-		
+
 		return rs;
 	}
 
-	private List<Team> getTeams() {
+	private List<TeamDTO> getTeamsFromJSON() {
 		ObjectMapper obj = new ObjectMapper();
-		List<Team> teamList = null;
+		List<TeamDTO> teamList = null;
 		try {
 			teamList = obj.readValue(this.getClass().getResourceAsStream("/ipl2020.json"),
-					new TypeReference<List<Team>>() {
+					new TypeReference<List<TeamDTO>>() {
 					});
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -178,22 +179,43 @@ public class PlayerServiceImpl implements PlayerService {
 		return teamList;
 	}
 
-	private List<Player> getPlayers(Team team) {
-		for (Player p : team.getPlayers()) {
-			p.setTeamCode(team.getLabel());
+	private List<Player> convertToPlayers(List<PlayerDTO> list, Team team) {
+		List<Player> players = new ArrayList<>();
+		for (PlayerDTO p : list) {
+			players.add(Player.builder().name(p.getName()).role(p.getRole()).price(p.getPrice()).team(team).build());
 		}
-		return team.getPlayers();
+		return players;
+	}
+
+	private Team convetToTeam(TeamDTO teamDTO) {
+		Team team = new Team();
+		team.setCity(teamDTO.getCity());
+		team.setCoach(teamDTO.getCoach());
+		team.setHome(teamDTO.getHome());
+		team.setName(teamDTO.getName());
+		team.setLabel(teamDTO.getLabel());
+
+		return team;
 	}
 
 	public void loadToMysql() {
-		List<Team> teamList = getTeams();
-		teamRepo.saveAll(teamList);
-		List<Player> playerList = new ArrayList<>();
-		for (Team t : teamList) {
-			List<Player> l = getPlayers(t);
-			playerList.addAll(l);
+		// get teamDTO with mapped teamDTO
+		List<TeamDTO> teamDTOList = getTeamsFromJSON();
+		for (TeamDTO obj : teamDTOList) {
+			// get the playerDTO
+			List<PlayerDTO> playerDTOList = obj.getPlayers();
+			// convert teamDTO to teams
+			Team team = convetToTeam(obj);
+			// save the teams without list of players (save entities with the foreign key
+			// firstly)
+			teamRepo.save(team);
+			// convert player DTO to player
+			List<Player> players = convertToPlayers(playerDTOList, team);
+			// add the players back to teams
+			team.addPlayers(players);
+			// save teams again then players will be saved into DB.
+			teamRepo.save(team);
 		}
-		playerRepo.saveAll(playerList);
 	}
 
 }

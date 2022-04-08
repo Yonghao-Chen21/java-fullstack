@@ -7,11 +7,13 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
 import com.careerit.sl.domain.Player;
+import com.careerit.sl.domain.Team;
 
 public interface PlayerRepo extends JpaRepository<Player,Long> {
-	public List<Player> findAllByTeamCode(String teamCode);
-	public int countByRoleAndTeamCode(String role,String teamCode);
-	public List<Player> findByRoleAndTeamCode(String role,String teamCode);
+	public List<Player> findByTeam(Team team);
+	public List<Player> findByTeamLabel(String label);
+	public int countByRoleAndTeamLabel(String role,String label);
+	public List<Player> findByRoleAndTeamLabel(String role,String label);
 	public List<Player> findAllByOrderByNameAsc();
 	public List<Player> findAllByOrderByPriceAsc();
 	public List<Player> findAllByOrderByRoleAsc();
