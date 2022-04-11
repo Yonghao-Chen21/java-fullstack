@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="Logout"/>
+		<item key="selection" value=""/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="tid"/>
+			<item value="4.3.11"/>
+			<item value="DTO"/>
 			<item value="logout"/>
 			<item value="readonly"/>
 			<item value="float"/>
@@ -20,11 +23,9 @@
 			<item value="List"/>
 			<item value="document"/>
 			<item value="getInstance"/>
-			<item value="addId"/>
-			<item value="editId"/>
-			<item value="productId"/>
 		</list>
 		<list key="replacehistory">
+			<item value="Dto"/>
 			<item value="double"/>
 			<item value="editId"/>
 			<item value="addId"/>

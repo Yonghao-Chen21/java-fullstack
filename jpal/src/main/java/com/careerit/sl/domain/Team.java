@@ -19,7 +19,7 @@ import lombok.Data;
 public class Team {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long tid;
+	private Long id;
 	@NotNull
 	private String name;
 	private String city;

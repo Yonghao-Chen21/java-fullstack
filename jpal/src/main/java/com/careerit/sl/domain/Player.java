@@ -20,12 +20,12 @@ import lombok.NoArgsConstructor;
 public class Player {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long pid;
+	private Long id;
 	private String name;
 	private String role;
 	private double price;
 	@ManyToOne
-	@JoinColumn(name = "team_tid")
+	@JoinColumn(name = "team_id")
 	private Team team;
 
 }
