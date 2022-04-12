@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.careerit.sl.dto.FeaturedAmountByLabelDto;
@@ -34,8 +35,7 @@ public class IplStatController {
 	}
 		
 	@GetMapping("/playersbylabel")
-	public List<PlayerReqDto> getPlayerByLabel(HttpServletRequest request) {
-		String label = request.getParameter("label");
+	public List<PlayerReqDto> getPlayerByLabel(@RequestParam String label) {
 		log.info("Search team code is :{}",label);
 		return service.getPlayerByTeam(label);
 	}
@@ -56,14 +56,12 @@ public class IplStatController {
 	}
 	
 	@GetMapping("/amountcountperteamrole")
-	public List<TeamRoleCountAmountDto> getTeamRoleCountAmountSpentByRoles(HttpServletRequest request) {
-		String label = request.getParameter("label");
+	public List<TeamRoleCountAmountDto> getTeamRoleCountAmountSpentByRoles(@RequestParam String label) {
 		return service.getTeamRoleCountAmountSpentByRoles(label);
 	}	
 	
 	@GetMapping("/feature")
-	public List<FeaturedAmountByLabelDto> getFeaturedAmountByLabelDto(HttpServletRequest request) {
-		String label = request.getParameter("label");
+	public List<FeaturedAmountByLabelDto> getFeaturedAmountByLabelDto(@RequestParam String label) {
 		return service.getFeaturedAmountByLabelDto(label);
 	}
 	
