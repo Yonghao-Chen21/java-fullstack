@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.Assert;
 
 import com.careerit.sl.domain.Player;
+import com.careerit.sl.domain.Team;
 import com.careerit.sl.dto.PlayerReqDto;
 import com.careerit.sl.repo.PlayerRepo;
 import com.careerit.sl.repo.TeamRepo;
@@ -34,10 +35,14 @@ public class PlayerServiceImpl implements PlayerService{
 		Assert.hasText(p.getName(), "Name can't be null.");
 		Assert.notNull(p.getTid(), "Team id can't be null.");
 		Player player = Mapper.playerReqDtoToDomainWOTeam(p);
-		player.setTeam(teamRepo.findById(p.getTid()).get());
-		player = playerRepo.save(player);
-		log.info("Player is added with id: {}", player.getId());
-		return Mapper.playerDomainToReqDto(player);
+		Optional<Team> optTeam = teamRepo.findById(p.getTid());
+		if(optTeam.isPresent()) {
+			player.setTeam(optTeam.get());
+			player = playerRepo.save(player);
+			log.info("Player is added with id: {}", player.getId());
+			return Mapper.playerDomainToReqDto(player);
+		}
+		throw new IllegalArgumentException("Team not found with given id :" + p.getTid());
 	}
 
 	@Override

@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.careerit.sl.dto.TeamReqDto;
@@ -58,8 +59,7 @@ public class TeamController {
 	}
 
 	@GetMapping("/search")
-	public List<TeamReqDto> search(HttpServletRequest request) {
-		String str = request.getParameter("str");
+	public List<TeamReqDto> search(@RequestParam String str) {
 		log.info("Search String is :{}",str);
 		return service.search(str);
 	}
